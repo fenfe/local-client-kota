@@ -4,15 +4,15 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #121214;
-    color: whitesmoke;
-    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #E5D4C5;
+    color: #45474F;
+    font-family: "Inter", sans-serif;
 }
 header{
     padding: 1rem 0 0 0;
     position: sticky;
     top: 0;
-    background-color: rgba(17, 23, 50, 0.972);
+    background-color: #E5D4C5;
     z-index: 5;
     display: flex;
     flex-direction: column;
@@ -24,26 +24,41 @@ nav{
     justify-content: space-around;
     margin-top: 1rem;
 }
+nav>button{
+box-shadow: 30px 0 40px rgba(0,0,0,0.1),
+-30px 0 40px rgba(0,0,0,0.1);  
+}
 h1{
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 24px;
+    color: black;
 }
 button{
     padding: 6px 18px;
     border: none;
-    font-family: Tahoma, Geneva, Verdana, sans-serif;
-    
+    font-family: "Inter", sans-serif;    
+    font-weight: 600;
+    letter-spacing: .5px;
+    border-radius: 5px;
 }
 section{
     padding: 0 12px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 article{
-    background-color: aliceblue;
-    color: #000000;
-    padding: 8px;
-    margin-top: 12px;
-    border-radius: 5px;
+    background-color: #F8F4F0;
+    color: #45474F;
+    padding: 16px;
+    margin-top: 16px;
+    border-radius: 12px;
     display: flex;
-}
+    box-shadow: 30px 0 40px rgba(0,0,0,0.1),
+    -30px 0 40px rgba(0,0,0,0.1);  }
+    article:last-child {
+        margin-bottom: 100px;
+    }
 img{
     width: 40%;
     border-radius: 8px;
@@ -56,13 +71,18 @@ img{
     flex-direction: column;
     width: 60%;
 }
-h3{  
+h3{ 
+    font-weight: 600;
+    color: #101828;
     font-size: 1rem;
-    padding: 4px 0;
+    line-height: 24px;
+    padding: 6px 0;
 }
 p{
-    font-size: 0.8rem;
-    margin: 4px 0;
+    font-size: 12px; 
+    font-weight: 300;
+    line-height: 16px;
+    font-style: normal;
 }
 .cardBtns{
     display: flex;
@@ -71,13 +91,43 @@ p{
     margin-top: auto;
 }
 .price{
-    font-size: 1.2rem;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #181028;
     display: block;
     margin: 6px 0;
     
 }
 .cardBtns>button{
-    font-size: 1rem;
-    background-color: aqua;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: rgb(241, 165, 11);
     font-weight: 800;
+    color: #101828;
+}
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 18px 12px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+footer>span{
+    font-size: 1rem;
+    font-weight: 800;
+    color: #181028;
+}
+footer>button{
+    background-color: green;
+    color: whitesmoke;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 50px;
+    padding: 12px 20px;
 }
