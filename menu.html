@@ -32,7 +32,7 @@
                 <p>Polony, chips, cheese, egg, special sauce</p>
                 <span class="price"> R45-00</span>
                 <div class="cardBtns">
-                    <button>-</button><span>1</span><button>+</button>
+                    <button class="minus">-</button><span class="quantity">1</span><button class="plus">+</button>
                 </div>
                 </div>
             </article>
@@ -43,7 +43,7 @@
                 <p>Russian, polony, chips, double cheese, egg, steak strips</p>
                 <span class="price"> R75-00</span>
                 <div class="cardBtns">
-                    <button>-</button><span>1</span><button>+</button>
+                    <button class="minus">-</button><span class="quantity">1</span><button class="plus">+</button>
                 </div>
                 </div>
             </article>
@@ -54,7 +54,7 @@
                 <p>Pure beef patty, cheese, lettuce, tomato, caramelized onions</p>
                 <span class="price"> R65-00</span>
                 <div class="cardBtns">
-                    <button>-</button><span>1</span><button>+</button>
+                    <button class="minus">-</button><span class="quantity">1</span><button class="plus">+</button>
                 </div>
                 </div>
             </article>
@@ -65,7 +65,7 @@
                 <p>Large family portion of slap chips with spicy masala salt</p>
                 <span class="price"> R25-00</span>
                 <div class="cardBtns">
-                    <button>-</button><span>1</span><button>+</button>
+                    <button class="minus">-</button><span class="quantity">1</span><button class="plus">+</button>
                 </div>
                 </div>
             </article>
@@ -80,7 +80,7 @@
                 <p>Polony, chips, cheese, egg, special sauce</p>
                 <span class="price"> R80-00</span>
                 <div class="cardBtns">
-                    <button>-</button><span>1</span><button>+</button>
+                    <button class="minus">-</button><span class="quantity">1</span class="plus"><button>+</button>
                 </div>
                 </div>
             </article>
@@ -91,7 +91,7 @@
                 <p>Russian, polony, chips, double cheese, egg, steak strips</p>
                 <span class="price"> R60-00</span>
                 <div class="cardBtns">
-                    <button>-</button><span>1</span><button>+</button>
+                    <button class="minus">-</button><span class="quantity">1</span><button class="plus">+</button>
                 </div>
                 </div>
             </article>
@@ -102,7 +102,7 @@
                 <p>Pure beef patty, cheese, lettuce, tomato, caramelized onions</p>
                 <span class="price"> R70-00</span>
                 <div class="cardBtns">
-                    <button>-</button><span>1</span><button>+</button>
+                    <button class="minus">-</button><span class="quantity">1</span><button class="plus">+</button>
                 </div>
                 </div>
             </article>
@@ -113,7 +113,7 @@
                 <p>Large family portion of slap chips with spicy masala salt</p>
                 <span class="price"> R40-00</span>
                 <div class="cardBtns">
-                    <button>-</button><span>1</span><button>+</button>
+                    <button class="minus">-</button><span class="quantity">1</span><button class="plus">+</button>
                 </div>
                 </div>
             </article>
@@ -128,7 +128,7 @@
                 <p> Your choice of spices and sauces</p>
                 <span class="price"> R30-00</span>
                 <div class="cardBtns">
-                    <button>-</button><span>1</span><button>+</button>
+                    <button class="minus">-</button><span class="quantity">1</span><button class="plus">+</button>
                 </div>
                 </div>
             </article>
@@ -139,7 +139,7 @@
                 <p>Russian, polony, chips, double cheese, egg, steak strips</p>
                 <span class="price"> R45-00</span>
                 <div class="cardBtns">
-                    <button>-</button><span>1</span><button>+</button>
+                    <button class="minus">-</button><span class="quantity">1</span><button class="plus">+</button>
                 </div>
                 </div>
             </article>
@@ -150,7 +150,7 @@
                 <p>Pure beef patty, cheese, lettuce, tomato, caramelized onions</p>
                 <span class="price"> R65-00</span>
                 <div class="cardBtns">
-                    <button>-</button><span>1</span><button>+</button>
+                    <button class="minus">-</button><span class="quantity">1</span><button class="plus">+</button>
                 </div>
                 </div>
             </article>
@@ -161,7 +161,7 @@
                 <p>Large family portion of slap chips with spicy masala salt</p>
                 <span class="price"> R25-00</span>
                 <div class="cardBtns">
-                    <button>-</button><span>1</span><button>+</button>
+                    <button class="minus">-</button><span class="quantity">1</span><button class="plus">+</button>
                 </div>
                 </div>
             </article>
@@ -169,7 +169,7 @@
     </main>
     <footer>
         <!-- sticky bottom total bar -->
-        <span>Total: R0</span><button>Send Order via WhatsApp</button>
+        Total: R <span id="total-price-view"> 0</span><button id="whatsapp-submit-btn">Send Order via WhatsApp</button>
     </footer>
     <script src="main.js"></script>
 </body>

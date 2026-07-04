@@ -34,7 +34,7 @@ class ShoppingCart {
     // The Secure Setter Guard Rail Module
     set activeDiscount(num){
         if(num < 0 || num > 100){
-            console.log('Security Alert: Rejected invalid discount amount! ');
+            // console.log('Security Alert: Rejected invalid discount amount! ');
             return;
         }
         this._discount = num;
@@ -44,7 +44,7 @@ class ShoppingCart {
         const originalTotal = this.getCartTotal();
 
         if (percentage < 0 || percentage > 100) {
-            console.log("Error: Invalid discount percentage requested!");
+            // console.log("Error: Invalid discount percentage requested!");
             return originalTotal;
         }
 
@@ -83,7 +83,7 @@ class ShoppingCart {
       // The Secure Setter Guard Rail Module
       set activeDiscount(num){
         if(num < 0 || num > 100){
-            console.log('Security Alert: Rejected invalid discount amount! ');
+            // console.log('Security Alert: Rejected invalid discount amount! ');
             return;
         }
         this._discount = num;
@@ -101,7 +101,7 @@ class ShoppingCart {
 // ======================================================================
 // INTEGRATION SANDBOX (Wired outside the class for browser event hooks)
 // ======================================================================
-// For html buttons
+// For html nav buttons
 document.getElementById('kotaBtn').addEventListener('click' , function(){
         document.getElementById('kotas').scrollIntoView({ behavior: 'smooth' });
 })
@@ -111,10 +111,17 @@ document.getElementById('burgerBtn').addEventListener('click' , function(){
 document.getElementById('sidesBtn').addEventListener('click' , function(){
     document.getElementById('sides').scrollIntoView({ behavior: 'smooth' });
 })
+// For targeting all article btns and numeric quantity spans
+const minusButtons = document.querySelectorAll('.minus');
+const plusButtons = document.querySelectorAll('.plus');
+const quantityDisplay = document.querySelectorAll('.quantity')
+console.log(quantityDisplay);
+// Targeting footer interactivity
+
 
 const myCart = new ShoppingCart();
 const addBtn = document.querySelector('#add-button');//grab btn
-const displayTotal = document.querySelector('#cart-total'); // grab view
+const displayTotal = document.getElementById('total-price-view') // grab view
 
 // Guard rail: Only wire up event loops if the physical HTML nodes exist on screen
 if (addBtn && displayTotal) {
@@ -132,7 +139,7 @@ const setTest = new ShoppingCart();
 setTest.activeDiscount = 500;
 // console.log("Discount after hack attempt:", setTest._discount);
 setTest.activeDiscount = 20; 
-console.log("Discount after valid assignment:", setTest._discount);
+// console.log("Discount after valid assignment:", setTest._discount);
 
 
 
