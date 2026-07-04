@@ -3,60 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- External fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>@Kg's kota menu</title>
 </head>
 <body>
     <header>
-         <h1>@Kg's kota</h1>
+         <h1>@Kg's kota Menu</h1>
          <nav>
-            <button>Kota</button>
-            <button>Burger</button>
-            <button>Sides</button>
+            <button id="kotaBtn">Kota</button>
+            <button id="burgerBtn">Burger</button>
+            <button id="sidesBtn">Sides</button>
          </nav>
     </header>
+    <!-- End of header section -->
     <main>
         <!-- food items cards -->
-        <section>
+        <section id="kotas">
+            <h2>Kotas</h2>
             <!-- kotas -->
             <article>
-                <img src="https://unsplash.com" alt="A delicious juicy kasi style kota">
+                <img src="./kota.PNG" alt="A delicious juicy kasi style kota">
+                <div class="cardText">
                 <h3>Special kota</h3>
                 <p>Polony, chips, cheese, egg, special sauce</p>
-                <span> R45-00</span>
-                <div>
+                <span class="price"> R45-00</span>
+                <div class="cardBtns">
                     <button>-</button><span>1</span><button>+</button>
+                </div>
                 </div>
             </article>
             <article>
+                <img src="./kota.PNG" alt="A delicious juicy kasi style kota">
+                <div class="cardText">
                 <h3>Full House Overload</h3>
                 <p>Russian, polony, chips, double cheese, egg, steak strips</p>
-                <span> R75-00</span>
-                <div>
+                <span class="price"> R75-00</span>
+                <div class="cardBtns">
                     <button>-</button><span>1</span><button>+</button>
+                </div>
                 </div>
             </article>
             <article>
+                <img src="./kota.PNG" alt="A delicious juicy kasi style kota">
+                <div class="cardText">
                 <h3>Kasi Beef Burger</h3>
                 <p>Pure beef patty, cheese, lettuce, tomato, caramelized onions</p>
-                <span> R65-00</span>
-                <div>
+                <span class="price"> R65-00</span>
+                <div class="cardBtns">
                     <button>-</button><span>1</span><button>+</button>
+                </div>
                 </div>
             </article>
             <article>
+                <img src="./kota.PNG" alt="A delicious juicy kasi style kota">
+                <div class="cardText">
                 <h3>Sides</h3>
-                <p> Large family portion of slap chips with spicy masala salt</p>
-                <span> R75-00</span>
-                <div>
+                <p>Large family portion of slap chips with spicy masala salt</p>
+                <span class="price"> R25-00</span>
+                <div class="cardBtns">
                     <button>-</button><span>1</span><button>+</button>
                 </div>
+                </div>
             </article>
-            
+        </section>
+        <!-- End of kota section -->
+        <section id="burgers">
+            <h2>Burgers</h2>
+            <article>
+                <img src="./kota.PNG" alt="A delicious juicy kasi style kota">
+                <div class="cardText">
+                <h3>King Burger</h3>
+                <p>Polony, chips, cheese, egg, special sauce</p>
+                <span class="price"> R80-00</span>
+                <div class="cardBtns">
+                    <button>-</button><span>1</span><button>+</button>
+                </div>
+                </div>
+            </article>
+            <article>
+                <img src="./kota.PNG" alt="A delicious juicy kasi style kota">
+                <div class="cardText">
+                <h3>Chicken burger</h3>
+                <p>Russian, polony, chips, double cheese, egg, steak strips</p>
+                <span class="price"> R60-00</span>
+                <div class="cardBtns">
+                    <button>-</button><span>1</span><button>+</button>
+                </div>
+                </div>
+            </article>
+            <article>
+                <img src="./kota.PNG" alt="A delicious juicy kasi style kota">
+                <div class="cardText">
+                <h3>Kasi Beef Burger</h3>
+                <p>Pure beef patty, cheese, lettuce, tomato, caramelized onions</p>
+                <span class="price"> R70-00</span>
+                <div class="cardBtns">
+                    <button>-</button><span>1</span><button>+</button>
+                </div>
+                </div>
+            </article>
+            <article>
+                <img src="./kota.PNG" alt="A delicious juicy kasi style kota">
+                <div class="cardText">
+                <h3>kiddies burger</h3>
+                <p>Large family portion of slap chips with spicy masala salt</p>
+                <span class="price"> R40-00</span>
+                <div class="cardBtns">
+                    <button>-</button><span>1</span><button>+</button>
+                </div>
+                </div>
+            </article>
+        </section>
+        <!-- End of kota section -->
+        <section id="sides">
+            <h2>Sides</h2>
+            <article>
+                <img src="./kota.PNG" alt="A delicious juicy kasi style kota">
+                <div class="cardText">
+                <h3>Large slap chips</h3>
+                <p> Your choice of spices and sauces</p>
+                <span class="price"> R30-00</span>
+                <div class="cardBtns">
+                    <button>-</button><span>1</span><button>+</button>
+                </div>
+                </div>
+            </article>
+            <article>
+                <img src="./kota.PNG" alt="A delicious juicy kasi style kota">
+                <div class="cardText">
+                <h3>Chicken wings</h3>
+                <p>Russian, polony, chips, double cheese, egg, steak strips</p>
+                <span class="price"> R45-00</span>
+                <div class="cardBtns">
+                    <button>-</button><span>1</span><button>+</button>
+                </div>
+                </div>
+            </article>
+            <article>
+                <img src="./kota.PNG" alt="A delicious juicy kasi style kota">
+                <div class="cardText">
+                <h3>Juicy Pork Ribs 300g</h3>
+                <p>Pure beef patty, cheese, lettuce, tomato, caramelized onions</p>
+                <span class="price"> R65-00</span>
+                <div class="cardBtns">
+                    <button>-</button><span>1</span><button>+</button>
+                </div>
+                </div>
+            </article>
+            <article>
+                <img src="./kota.PNG" alt="A delicious juicy kasi style kota">
+                <div class="cardText">
+                <h3>Green Leafy Salad</h3>
+                <p>Large family portion of slap chips with spicy masala salt</p>
+                <span class="price"> R25-00</span>
+                <div class="cardBtns">
+                    <button>-</button><span>1</span><button>+</button>
+                </div>
+                </div>
+            </article>
         </section>
     </main>
     <footer>
         <!-- sticky bottom total bar -->
         <span>Total: R0</span><button>Send Order via WhatsApp</button>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>

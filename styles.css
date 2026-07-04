@@ -7,6 +7,7 @@ body{
     background-color: #E5D4C5;
     color: #45474F;
     font-family: "Inter", sans-serif;
+    font-size: 1rem;
 }
 header{
     padding: 1rem 0 0 0;
@@ -29,10 +30,11 @@ box-shadow: 30px 0 40px rgba(0,0,0,0.1),
 -30px 0 40px rgba(0,0,0,0.1);  
 }
 h1{
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 700;
     line-height: 24px;
     color: black;
+    padding: 1rem 0;
 }
 button{
     padding: 6px 18px;
@@ -43,10 +45,14 @@ button{
     border-radius: 5px;
 }
 section{
-    padding: 0 12px;
+    padding: 24px 12px 0 12px;
     max-width: 500px;
     margin: 0 auto;
+    scroll-margin-top: 100px; 
 }
+  section:last-child {
+        margin-bottom: 100px;
+    }
 article{
     background-color: #F8F4F0;
     color: #45474F;
@@ -56,9 +62,7 @@ article{
     display: flex;
     box-shadow: 30px 0 40px rgba(0,0,0,0.1),
     -30px 0 40px rgba(0,0,0,0.1);  }
-    article:last-child {
-        margin-bottom: 100px;
-    }
+  
 img{
     width: 40%;
     border-radius: 8px;
