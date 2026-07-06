@@ -114,25 +114,72 @@ document.getElementById('sidesBtn').addEventListener('click' , function(){
 // For targeting all article btns and numeric quantity spans
 const minusButtons = document.querySelectorAll('.minus');
 const plusButtons = document.querySelectorAll('.plus');
-const quantityDisplay = document.querySelectorAll('.quantity')
-console.log(quantityDisplay);
+const quantityDisplay = document.querySelectorAll('.quantity');
+// Footer
+const whatappCheckout = document.getElementById('whatsapp-submit-btn');//grab btn
+const displayTotal = document.getElementById('total-price-view') // grab view
+
+// Testing
+// const minusTest = document.getElementById('testMinus');
+// const plusTest = document.getElementById('testPlus');
+// const testQuantity = document.getElementById('testQuantity');
+
+// plusTest.addEventListener('click', function(){
+//     let currentNum = Number(testQuantity.textContent); // target span next to btn
+//     let updatedQuantity = currentNum + 1; // add 1 to it
+//     testQuantity.textContent = updatedQuantity;
+// })
+// minusTest.addEventListener('click', function(){
+//     let currentNum = Number(testQuantity.textContent);
+//     let updatedQuantity = currentNum - 1;
+//     if(currentNum > 0){
+//         testQuantity.textContent = updatedQuantity;
+//     }
+// })
+// Adding click events and tracking the + quantity 
+plusButtons.forEach(function(btn, index) {
+    btn.addEventListener('click', function() {
+    let currentNum = Number(quantityDisplay[index].textContent);
+    let updatedQuantity = currentNum + 1;
+    quantityDisplay[index].textContent = updatedQuantity;
+
+    });
+});
+// Adding click events and tracking the - quantity 
+minusButtons.forEach(function(btn, index) {
+    btn.addEventListener('click', function() {
+        let currentNum = Number(quantityDisplay[index].textContent);
+        let updatedQuantity = currentNum - 1;
+        if(currentNum > 0){
+            quantityDisplay[index].textContent = updatedQuantity;
+        }
+    })
+})
+// let currentNum = Number(span.textContent); // Cast string to number first!
+
+
+//  for clicks on plus and minus nodes
+// minusButtons.forEach((btn, index) => {
+//     btn.addEventListener('click', )
+// })
+
+console.log(whatappCheckout);
 // Targeting footer interactivity
 
 
 const myCart = new ShoppingCart();
-const addBtn = document.querySelector('#add-button');//grab btn
-const displayTotal = document.getElementById('total-price-view') // grab view
+
 
 // Guard rail: Only wire up event loops if the physical HTML nodes exist on screen
-if (addBtn && displayTotal) {
-    addBtn.addEventListener('click', () => {
-        // Test simulation: Add a standard item to change the state tracker
-        myCart.addItem("Kota", 30);
-        myCart.addItem("drink", 18);
+// if (addBtn && displayTotal) {
+//     addBtn.addEventListener('click', () => {
+//         // Test simulation: Add a standard item to change the state tracker
+//         myCart.addItem("Kota", 30);
+//         myCart.addItem("drink", 18);
 
-        displayTotal.textContent = `R${myCart.getCartTotal()}`;
-    });
-}
+//         displayTotal.textContent = `R${myCart.getCartTotal()}`;
+//     });
+// }
 
 ///////
 const setTest = new ShoppingCart();
