@@ -139,12 +139,20 @@ const displayTotal = document.getElementById('total-price-view') // grab view
 // Adding click events and tracking the + quantity 
 plusButtons.forEach(function(btn, index) {
     btn.addEventListener('click', function() {
-    let currentNum = Number(quantityDisplay[index].textContent);
-    let updatedQuantity = currentNum + 1;
-    quantityDisplay[index].textContent = updatedQuantity;
+    let currentNum = Number(quantityDisplay[index].textContent);// target
+    let updatedQuantity = currentNum + 1; // update
+    quantityDisplay[index].textContent = updatedQuantity; // display
 
+    let name = btn.getAttribute('data-name');
+    let price = btn.getAttribute('data-price');
+
+    myCart.addItem(name, price);
+    console.log("Central RAM Database State:", myCart.items);
+    updateInterfaceView();
     });
 });
+
+
 // Adding click events and tracking the - quantity 
 minusButtons.forEach(function(btn, index) {
     btn.addEventListener('click', function() {
@@ -152,8 +160,20 @@ minusButtons.forEach(function(btn, index) {
         let updatedQuantity = currentNum - 1;
         if(currentNum > 0){
             quantityDisplay[index].textContent = updatedQuantity;
+
+              // 1. Extract the unique name string metadata attribute from the DOM element node
+              let name = btn.getAttribute('data-name');
+
+              // 2. PIPE DIRECTLY INTO BACKEND SURGICAL ERASER MODULE
+              myCart.removeItem(name);
+  
+              // 3. (Optional placeholder for now) Run view updates here next!
+              console.log("Central RAM Database State After Minus:", myCart.items);
+              updateInterfaceView();
+
         }
     })
+
 })
 // let currentNum = Number(span.textContent); // Cast string to number first!
 
@@ -188,7 +208,16 @@ setTest.activeDiscount = 500;
 setTest.activeDiscount = 20; 
 // console.log("Discount after valid assignment:", setTest._discount);
 
-
+// ======================================================================
+// CORE INTERFACE RE-RENDERING ENGINE
+// ======================================================================
+function updateInterfaceView() {
+    // 1. Grab the live total calculation straight from backend RAM memory
+    const grandTotal = myCart.getCartTotal();
+    
+    // 2. Dynamically re-assign the text content layer of the HTML total bar element node
+    displayTotal.textContent = `Total: R${grandTotal}-00`;
+}
 
 
 
