@@ -54,13 +54,21 @@ class ShoppingCart {
 
     // Ticket SHOP-402 Win: Surgical Item Eraser Module
     removeItem(itemName) {
-        const targetIndex = this.items.findIndex(item => item.name === itemName);
-        
-        if (targetIndex !== -1) {
-            this.items.splice(targetIndex, 1);
-        } else {
-            console.log("Error: Product name not found in repository!");
-        }
+       let matchedItem = this.items.find(item => item .name === itemName);// locate a match in array
+
+    // GUARD RAIL: If the item isn't even in the cart, drop out instantly!
+        if(!matchedItem) return;
+
+    // ACTION A: If we have plenty, just drop the count and leave!
+    if(matchedItem.quantity > 1){ // and if the matched quantity is more than 1
+        matchedItem.quantity -= 1; // decrease it by 1
+        return;
+    }
+
+    // ACTION B: If we reached this line, it means quantity is exactly 1. Delete it!
+    const targetIndex = this.items.findIndex(item => item.name === itemName);
+    this.items.splice(targetIndex, 1);
+      
     }
 
     // Ticket SHOP-407 : Implement Total Item-Quantity Accumulator Engine
