@@ -125,6 +125,34 @@ const plusButtons = document.querySelectorAll('.plus');
 const quantityDisplay = document.querySelectorAll('.quantity');
 // Footer
 const whatappCheckout = document.getElementById('whatsapp-submit-btn');//grab btn
+whatappCheckout.addEventListener('click', function (){
+        // 1. THE GUARD RAIL
+    if(myCart.items.length === 0){
+        alert('Your cart is empty!! Add some delicious kotas first.');
+        return;
+    }
+    
+    // 2. THE INITIAL FORMATTING TEXT TEMPLATE
+        let messageText = "*🔥 NEW ORDER VIA @KG'S KOTA MENU * \n\n";
+        myCart.items.forEach(item => {// go through every obj inside items array 
+            messageText += `• ${item.quantity}x ${item.name} - R${item.price * item.quantity}  \n`;
+        }) 
+            // 1. WELD THE TOTAL AND INSTRUCTIONS INTO THE MASTER PAYLOAD
+            messageText += `\n-------------------------------------------\n`;
+            messageText += `💰 *Grand Total: R${myCart.getCartTotal()}-00*\n`;
+            messageText += `---------------------------------------\n\n`;
+            messageText += `📍 *Please reply with your name and delivery address / collection time:*`;
+
+            // 2. CONVERT TEXT INTO A SECURE, WEB-SAFE COMPRESSED DATA STREAM
+        let encodedText = encodeURIComponent(messageText);
+
+            // 3. LAUNCH THE WHATSAPP CLOUD API CHANNEL IN A BRAND-NEW VIEWPORT TAB
+            window.open(`https://wa.me/27609085060?text=${encodedText}`, '_blank');
+        // messageTotal = `\n The Total for your order = R ${myCart.getCartTotal()}-00 `
+        // console.log(messageText + messageTotal)
+
+        // console.log(` The total for your order = R ${myCart.getCartTotal()}-00`)
+})
 const displayTotal = document.getElementById('total-price-view') // grab view
 
 // Testing
