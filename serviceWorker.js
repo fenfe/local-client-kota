@@ -1,11 +1,12 @@
 const CACHE_NAME = 'kota-menu-v1';
 
 const ASSETS = [
-    './',
+    '/',
     'index.html',
     'styles.css',
     'main.js',
-    './manifest.json'
+    './manifest.json',
+    './kota.PNG'
 ];
 
 // Install service worker and cache all files
