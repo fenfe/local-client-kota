@@ -3,12 +3,12 @@
     "name" : "Kota Menu App",
     "icons" : [
         {
-            "src" : "kota.png",
+            "src" : "./kota.PNG",
             "type" : "image/png",
             "sizes" : "192x192"
     },
     {
-        "src" : "kota-512.png",
+        "src" : "./kota.PNG",
         "type" : "image/png",
         "sizes" : "512x512"
     }
