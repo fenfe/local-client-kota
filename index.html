@@ -13,6 +13,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+   
+   <!-- Linking the manifest file -->
+   <link rel="manifest" href="./manifest.json">
+
+   <!-- Registering the service worker -->
+   <script>
+    if('serviceWorker' in navigator){
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./serviceWorker.js')
+            .then(reg => console.log('Service Worker Registered!'))
+            .catch(err => console.log('Registration failed: ', err));
+        });
+    }
+   </script>
     <title>@Kg's kota menu</title>
 </head>
 <body>
