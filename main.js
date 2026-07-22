@@ -133,7 +133,7 @@ whatappCheckout.addEventListener('click', function (){
     }
     
     // 2. THE INITIAL FORMATTING TEXT TEMPLATE
-        let messageText = "*🔥 NEW ORDER VIA @KG'S KOTA MENU * \n\n";
+        let messageText = "*🔥 NEW ORDER VIA PassMoreOne-Gwinya-FastFood * \n\n";
         myCart.items.forEach(item => {// go through every obj inside items array 
             messageText += `• ${item.quantity}x ${item.name} - R${item.price * item.quantity}  \n`;
         }) 
