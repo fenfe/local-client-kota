@@ -1,31 +1,29 @@
-
-
 {
     "short_name" : "PassMoreOne-Gwinya-FastFood",
     "name" : "PassMoreOne Gwinya FastFood",
     "icons" : [
         {
-            "src" : "./beefGwinya-678x452.jfif",
+            "src" : "./beefGwinya.jfif",
             "type" : "image/jpeg",
-            "sizes" : "678x452"
+            "sizes" : "192x192"
         },
         {
-            "src" : "./chickenBurger-554x554.jfif",
+            "src" : "./chickenBurger.jfif",
+            "type" : "image/jpeg",
+            "sizes" : "512x512"
+        },
+        {
+            "src" : "./chips.jfif",
             "type" : "image/jpeg",
             "sizes" : "554x554"
         },
         {
-            "src" : "./chips-554x554.jfif",
-            "type" : "image/jpeg",
-            "sizes" : "554x554"
-        },
-        {
-            "src" : "./jumboGwinya-678x452.jfif",
+            "src" : "./jumboGwinya.jfif",
             "type" : "image/jpeg",
             "sizes" : "678x452"
         },
         {
-            "src" : "./staffedGwinya-515x388.jfif",
+            "src" : "./staffedGwinya.jfif",
             "type" : "image/jpeg",
             "sizes" : "515x388"
         }

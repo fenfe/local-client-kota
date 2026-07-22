@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kota-menu-v1';
+const CACHE_NAME = 'kota-menu-v2';
 
 const ASSETS = [
     '/',
@@ -41,3 +41,4 @@ self.addEventListener('fetch', (e) => {
         })
     );
 });
+
