@@ -6,7 +6,11 @@ const ASSETS = [
     'styles.css',
     'main.js',
     './manifest.json',
-    './kota.PNG'
+    './beefGwinya.jfif',
+    './chickenBurger.jfif',
+    './chips.jfif',
+    './jumboGwinya.jfif',
+    './staffedGwinya.jfif'
 ];
 
 // Install service worker and cache all files
