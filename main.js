@@ -147,7 +147,7 @@ whatappCheckout.addEventListener('click', function (){
         let encodedText = encodeURIComponent(messageText);
 
             // 3. LAUNCH THE WHATSAPP CLOUD API CHANNEL IN A BRAND-NEW VIEWPORT TAB
-            window.open(`https://wa.me/27795959701?text=${encodedText}`, '_blank');
+            window.open(`https://wa.me/27832465268?text=${encodedText}`, '_blank');
         // messageTotal = `\n The Total for your order = R ${myCart.getCartTotal()}-00 `
         // console.log(messageText + messageTotal)
 
