@@ -147,7 +147,7 @@ whatappCheckout.addEventListener('click', function (){
         let encodedText = encodeURIComponent(messageText);
 
             // 3. LAUNCH THE WHATSAPP CLOUD API CHANNEL IN A BRAND-NEW VIEWPORT TAB
-            window.open(`https://wa.me/27609085060?text=${encodedText}`, '_blank');
+            window.open(`https://wa.me/27795959701?text=${encodedText}`, '_blank');
         // messageTotal = `\n The Total for your order = R ${myCart.getCartTotal()}-00 `
         // console.log(messageText + messageTotal)
 
@@ -258,3 +258,17 @@ function updateInterfaceView() {
 
 
 
+const items = [{ id: 1, quantity: 5 }, { id: 2, quantity: 10 }];
+
+// 1. Find the index
+const index = items.findIndex(item => item.id === 1); // Returns 0
+
+// 2. Use the index to access the property
+if (index !== -1) {
+  console.log(items[index].quantity); // Returns 5
+}
+
+
+
+
+  
